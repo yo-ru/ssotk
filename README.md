@@ -19,10 +19,24 @@ fallback runs; every path just gets slower.
 
 ```
 ssotk fetch-tools           # downloads bin/quickbms.exe + bin/crunch_unity.exe
-ssotk unpack                # 31 .csa archives -> extracted/
-ssotk mine translations     # -> out/translations_en.json
-ssotk mine horses           # -> out/horses.csv, horse_breeds.csv, horses.json
-ssotk mine items            # -> out/items.csv, items.json
+ssotk all                   # unpack + identify + scenes + mine translations/horses/items
+ssotk convert --types dds,tga    # textures -> PNG (slow; not in `all`)
+ssotk mine icons                  # per-item icon PNGs (slow; not in `all`)
+```
+
+`ssotk all` is the "everything but textures and icons" shortcut. Textures
+and icons are gated because they can take tens of minutes and depend on
+`bin/crunch_unity.exe`. To run the steps individually:
+
+```
+ssotk unpack                            # 31 .csa archives -> extracted/
+ssotk identify                          # magic-byte file breakdown
+ssotk scene extracted --out out/scenes  # every .scene -> JSON
+ssotk mine translations                 # -> out/translations_en.json
+ssotk mine horses                       # -> out/horses.csv + horse_breeds.csv + horses.json
+ssotk mine items                        # -> out/items.csv + items.json
+ssotk convert --types dds,tga           # -> out/converted/**/*.png
+ssotk mine icons                        # -> out/icons/<id>.png + out/textures/<id>.png
 ```
 
 ## Commands
