@@ -18,10 +18,10 @@ fallback runs; every path just gets slower.
 ## Setup + full pipeline
 
 ```
-ssotk fetch-tools           # downloads bin/quickbms.exe + bin/crunch_unity.exe
-ssotk all                   # unpack + identify + scenes + mine translations/horses/items
-ssotk convert --types dds,tga    # textures -> PNG (slow; not in `all`)
-ssotk mine icons                  # per-item icon PNGs (slow; not in `all`)
+ssotk fetch-tools              # downloads bin/quickbms.exe + bin/crunch_unity.exe
+ssotk all                      # unpack + identify + scenes + mine translations/horses/items
+ssotk convert --types dds,tga  # textures -> PNG (slow; not in `all`)
+ssotk mine icons               # per-item icon PNGs (slow; not in `all`)
 ```
 
 `ssotk all` is the "everything but textures and icons" shortcut. Textures
