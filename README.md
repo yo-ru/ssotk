@@ -84,7 +84,7 @@ catalog = items.read("PlayerItemManager.scene", translations=trans)
 | `.tga` (CRN-wrapped) | `ssotk convert` (extract; PNG needs `crunch_unity.exe`) |
 | PXScript VM dumps | `ssotk pxscript` |
 | `.bank` (FMOD) | out of scope; use FMOD Studio |
-| `.fbx` (SSO-proprietary) | out of scope |
+| `.fbx` | out of scope; use Blender |
 | `.ccx` (integrity manifests) | out of scope; see [RealIndrit/sso-format](https://github.com/RealIndrit/sso-format) |
 
 ## PXScript capture
