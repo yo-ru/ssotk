@@ -17,6 +17,8 @@ fallback runs; every path just gets slower.
 
 ## Setup + full pipeline
 
+NOTE: relies on SSO being installed at it's default path: `C:\Program Files\Star Stable Online\client`.
+
 ```
 ssotk fetch-tools              # downloads bin/quickbms.exe + bin/crunch_unity.exe
 ssotk all                      # unpack + identify + scenes + mine translations/horses/items
